@@ -1,0 +1,15 @@
+[submodule "external/VulkanMemoryAllocator-Hpp"]
+	path = external/VulkanMemoryAllocator-Hpp
+	url = https://github.com/malte-v/VulkanMemoryAllocator-Hpp.git
+[submodule "external/glfw"]
+	path = external/glfw
+	url = https://github.com/glfw/glfw.git
+[submodule "external/glm"]
+	path = external/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "external/tinyobjloader"]
+	path = external/tinyobjloader
+	url = https://github.com/tinyobjloader/tinyobjloader.git
+[submodule "external/stb"]
+	path = external/stb
+	url = https://github.com/nothings/stb.git
