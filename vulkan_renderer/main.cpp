@@ -3,6 +3,10 @@
 
 int main()
 {
+  //Buffer::BufferTest();
+  //return 0;
+
   Application app;
-  return app.run();
+
+  return RunApplication(&app);
 }

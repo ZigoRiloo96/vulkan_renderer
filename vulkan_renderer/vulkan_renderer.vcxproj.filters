@@ -8,6 +8,9 @@
     <Filter Include="res">
       <UniqueIdentifier>{0ccb8011-7d75-4809-9a2e-f054ca7ebf5b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Renderer">
+      <UniqueIdentifier>{35e4d64c-451b-4c6c-8311-e6ff164f49b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -22,6 +25,18 @@
     <ClInclude Include="PCH.h">
       <Filter>src</Filter>
     </ClInclude>
+    <ClInclude Include="Buffer.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Allocator.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>src\Renderer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -31,6 +46,15 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="PCH.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Allocator.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
