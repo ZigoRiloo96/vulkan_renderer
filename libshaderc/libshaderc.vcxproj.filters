@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\external\shaderc\libshaderc\src\shaderc_private.h" />
+    <ClInclude Include="..\external\shaderc\libshaderc\include\shaderc\env.h" />
+    <ClInclude Include="..\external\shaderc\libshaderc\include\shaderc\shaderc.h" />
+    <ClInclude Include="..\external\shaderc\libshaderc\include\shaderc\shaderc.hpp" />
+    <ClInclude Include="..\external\shaderc\libshaderc\include\shaderc\status.h" />
+    <ClInclude Include="..\external\shaderc\libshaderc\include\shaderc\visibility.h" />
+    <ClInclude Include="..\external\shaderc\libshaderc_util\src\death_test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\external\shaderc\libshaderc\src\shaderc.cc" />
+    <ClCompile Include="..\external\shaderc\libshaderc_util\src\args.cc" />
+    <ClCompile Include="..\external\shaderc\libshaderc_util\src\compiler.cc" />
+    <ClCompile Include="..\external\shaderc\libshaderc_util\src\file_finder.cc" />
+    <ClCompile Include="..\external\shaderc\libshaderc_util\src\io.cc" />
+    <ClCompile Include="..\external\shaderc\libshaderc_util\src\message.cc" />
+    <ClCompile Include="..\external\shaderc\libshaderc_util\src\resources.cc" />
+    <ClCompile Include="..\external\shaderc\libshaderc_util\src\shader_stage.cc" />
+    <ClCompile Include="..\external\shaderc\libshaderc_util\src\spirv_tools_wrapper.cc" />
+    <ClCompile Include="..\external\shaderc\libshaderc_util\src\version_profile.cc" />
+  </ItemGroup>
+</Project>

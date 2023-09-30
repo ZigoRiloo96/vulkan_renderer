@@ -4,12 +4,11 @@ struct
 Window
 {
 	GLFWwindow* glfw_window;
-	VulkanAPI vulkan;
+	Renderer renderer;
+	Camera camera;
 };
 
-std::vector<const char*> GetRequiredExtensions();
-
-GLFWwindow*
+void
 CreateWindow(Window* window, uint32_t width = 800, uint32_t height = 600, const char* title = "Default");
 
 void

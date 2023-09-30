@@ -11,6 +11,9 @@
     <Filter Include="src\Renderer">
       <UniqueIdentifier>{35e4d64c-451b-4c6c-8311-e6ff164f49b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Input">
+      <UniqueIdentifier>{8f0d7382-5b44-4cb9-bceb-0b0e11b398df}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -19,13 +22,7 @@
     <ClInclude Include="Window.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="VulkanAPI.h">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="PCH.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="Buffer.hpp">
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="Allocator.h">
@@ -37,12 +34,24 @@
     <ClInclude Include="Mesh.h">
       <Filter>src\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>src\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>src\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="glfwVulkanAPI.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="PCH.cpp">
@@ -55,6 +64,18 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="Window.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>src\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>src\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>src\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>

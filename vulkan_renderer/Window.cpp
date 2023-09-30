@@ -17,7 +17,7 @@ std::vector<const char*> GetRequiredExtensions()
 	return extensions;
 }
 
-GLFWwindow*
+void
 CreateWindow(Window* window, uint32_t width, uint32_t height, const char* title)
 {
 	glfwInit();
@@ -28,14 +28,12 @@ CreateWindow(Window* window, uint32_t width, uint32_t height, const char* title)
 	window->glfw_window = glfwCreateWindow(width, height, title, nullptr, nullptr);
 
 	glfwSetWindowUserPointer(window->glfw_window, window);
-
-	return window->glfw_window;
 }
 
 void
 ResizeWindow(Window* window)
 {
-	window->vulkan.framebufferResized = true;
+	window->renderer.framebufferResized = true;
 }
 
 static void
@@ -48,7 +46,9 @@ framebufferResizeCallback(GLFWwindow* window, int width, int height)
 void
 InitWindow(Window* window, uint32_t width, uint32_t height, const char* title)
 {
-	InitVulkanAPI(&window->vulkan, GetRequiredExtensions(), CreateWindow(window, width, height, title));
+	CreateWindow(window, width, height, title);
+
+	InitRenderer(window, GetRequiredExtensions());
 
 	glfwSetFramebufferSizeCallback(window->glfw_window, framebufferResizeCallback);
 }
@@ -56,6 +56,8 @@ InitWindow(Window* window, uint32_t width, uint32_t height, const char* title)
 void
 TermWindow(Window* window)
 {
+	TermRenderer(&window->renderer);
+
 	glfwDestroyWindow(window->glfw_window);
 	glfwTerminate();
 }
@@ -69,7 +71,7 @@ PollEvents()
 void
 DrawFrame(Window* window)
 {
-	DrawFrame(&window->vulkan);
+	DrawFrame(&window->renderer);
 }
 
 bool
@@ -81,5 +83,5 @@ IsClosed(Window* window)
 void
 OnWindowClose(Window* window)
 {
-	WaitIdle(&window->vulkan);
+	WaitIdle(&window->renderer);
 }

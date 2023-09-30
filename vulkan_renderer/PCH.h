@@ -35,6 +35,11 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/hash.hpp>
 
+#include <glm/gtc/quaternion.hpp>
+
+#define GLM_ENABLE_EXPERIMENTAL
+#include <glm/gtx/quaternion.hpp>
+
 #define GLFW_INCLUDE_VULKAN
 #include <GLFW/glfw3.h>
 
@@ -42,25 +47,33 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-typedef uint32_t byte;
-#define s *1000ll*1000ll*1000ll
-
-template <typename T>
-using ref = std::shared_ptr<T>;
+#include "types.h"
 
 #include "utils.hpp"
 
-#include "Allocator.h"
-#include "Buffer.hpp"
+//#include "ShaderGenerator.h"
+
+#include "Timer.h"
+
+
 
 #include "vk.hpp"
+
+const int MAX_FRAMES_IN_FLIGHT = 2;
+
+#include "Allocator.h"
+#include "Buffer.hpp"
 
 #include "Mesh.h"
 
 //#include "vk_mem_alloc.h"
 
-#include "VulkanAPI.h"
+#include "Camera.h"
+
+#include "Renderer.h"
 
 #include "Window.h"
+
+#include "Input.h"
 
 #include "Application.h"
